@@ -1,6 +1,8 @@
 # Hangul-Automatic-typing-macro
 Hangul auto typing
 
+![](https://github.com/affineur/Hangul-Automatic-typing-macro/blob/master/autotyper.gif)
+
 사용한 gui library는 nana
 http://nanapro.org/en-us/
 에서 다운받으시면 됩니다.
