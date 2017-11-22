@@ -261,21 +261,9 @@ namespace at
             (*layout_)["buttons"] << *buttons_[0] << *buttons_[1];
 
             editor_->edited();
-            setupEvent();
 
             layout_->collocate();
             this->show();
-        }
-
-        void setupEvent()
-        {
-            buttons_[0]->events().mouse_down([]() {
-                keybd_event(VK_HOME, MapVirtualKey(VK_HOME, 0), KEYEVENTF_SCANCODE | KEYEVENTF_EXTENDEDKEY, 0);
-            });
-
-            buttons_[1]->events().mouse_down([]() {
-                keybd_event(VK_END, MapVirtualKey(VK_END, 0), KEYEVENTF_SCANCODE | KEYEVENTF_EXTENDEDKEY, 0);
-            });
         }
 
         std::shared_ptr<nana::textbox> editor() const
@@ -348,11 +336,6 @@ namespace at
     };
 }
 
-//int WINAPI wWinMain(
-//    HINSTANCE hInstance, 
-//    HINSTANCE prevInstance, 
-//    LPWSTR cmdLine, 
-//    int cmdShow)
 int main()
 {
     using namespace std;
